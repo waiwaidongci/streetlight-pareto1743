@@ -18,5 +18,14 @@ export const workspace = {
   deliveries: () => call('/deliveries'),
   schedule: data => call('/schedules', data),
   disable: id => call(`/schedules/${id}/disable`, {}),
+  revisionBatches: () => call('/board/revisions'),
+  boardIncidents: () => call('/board/incidents'),
+  currentBoards: () => call('/board/current'),
+  boardVersions: (reportDay, district = '') =>
+    call(`/board/versions?report_day=${encodeURIComponent(reportDay)}&district=${encodeURIComponent(district)}`),
+  boardVersion: id => call(`/board/versions/${id}`),
+  uploadRevisions: data => call('/board/revisions', data),
+  handovers: () => call('/board/handovers'),
+  createHandover: data => call('/board/handovers', data),
   download: (path, filename) => saveFile(path, session.token, filename),
 };

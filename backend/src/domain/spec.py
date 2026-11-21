@@ -39,7 +39,7 @@ SPEC = {
     "decision": "夜巡处置",
     "action": "提交夜巡复核",
     "modes": ["安排夜巡", "持续观察", "常规归档"],
-    "pages": ["养护值班总览", "灯组与工单", "集中度测算", "集中度与巡检队列", "夜巡复核", "巡检交付"],
+    "pages": ["养护值班总览", "灯组与工单", "集中度测算", "集中度与巡检队列", "每日巡检看板", "夜巡复核", "巡检交付"],
     "fields": [
         {"key": "record_type", "label": "记录类型", "type": "select", "required": True, "options": ["灯组台账", "暗区工单"]},
         {"key": "site_id", "label": "灯组编号", "type": "string", "required": True},
